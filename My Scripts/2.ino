@@ -2,23 +2,23 @@
 
 void setup()
 {
-  pinMode(2, INPUT_PULLUP);
+	pinMode(2, INPUT_PULLUP);
 }
 
 void loop()
 {
-  // do nothing until pin 2 goes low
-  while (digitalRead(2) == HIGH)
-  {
-  }
-  
-  Mouse.begin();
-
-  while (digitalRead(2) == LOW)
-  {
-    Mouse.click();
-    delay(25);
-  }
-  
-  Mouse.end();
+	// Do nothing until pin 2 goes low.
+	while (digitalRead(2) == HIGH)
+	{
+	}
+	
+	Mouse.begin();
+	
+	while (digitalRead(2) == LOW)
+	{
+		Mouse.click();
+		delay(25);
+	}
+	
+	Mouse.end();
 }
