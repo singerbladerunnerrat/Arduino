@@ -1,0 +1,4 @@
+Arduino Spacings
+
+2.54mm [.1in] Centerline
+Pitch 0.100" (2.54mm)
