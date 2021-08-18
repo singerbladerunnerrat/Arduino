@@ -1,0 +1,9 @@
+Notes
+
+https://www.arduino.cc/reference/en/language/functions/usb/keyboard/
+
+https://www.arduino.cc/reference/en/language/functions/usb/keyboard/keyboardmodifiers/
+
+https://www.asciitable.com/
+
+https://keycode.info/
