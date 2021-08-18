@@ -23,32 +23,32 @@ int EWOKeyboardArray[]={13, 96, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203
 
 void setup()
 {
-  pinMode(2, INPUT_PULLUP);
+	pinMode(2, INPUT_PULLUP);
 }
 
 int EWOKeyboardCount = 1;
 
 void loop()
 {
-  // Do nothing until pin 2 goes low.
-  while (digitalRead(2) == HIGH)
-  {
-    delay(1000);
-  }
-  
-  Keyboard.begin();
-  
-  while (digitalRead(2) == LOW)
-  {
-    Keyboard.press(EWOKeyboardArray[EWOKeyboardCount]);
-    Keyboard.release(EWOKeyboardArray[EWOKeyboardCount]);
-    delay(10);
-    EWOKeyboardCount++;
-    if (EWOKeyboardCount > EWOKeyboardArray[0])
-    {
-      EWOKeyboardCount = 1;
-    }
-  }
-  
-  Keyboard.end();
+	// Do nothing until pin 2 goes low.
+	while (digitalRead(2) == HIGH)
+	{
+		delay(1000);
+	}
+	
+	Keyboard.begin();
+	
+	while (digitalRead(2) == LOW)
+	{
+		Keyboard.press(EWOKeyboardArray[EWOKeyboardCount]);
+		Keyboard.release(EWOKeyboardArray[EWOKeyboardCount]);
+		delay(10);
+		EWOKeyboardCount++;
+		if (EWOKeyboardCount > EWOKeyboardArray[0])
+		{
+			EWOKeyboardCount = 1;
+		}
+	}
+	
+	Keyboard.end();
 }
