@@ -42,7 +42,7 @@ void loop()
 	{
 		Keyboard.press(EWOKeyboardArray[EWOKeyboardCount]);
 		Keyboard.release(EWOKeyboardArray[EWOKeyboardCount]);
-		delay(10);
+		delay(200);
 		EWOKeyboardCount++;
 		if (EWOKeyboardCount > EWOKeyboardArray[0])
 		{
