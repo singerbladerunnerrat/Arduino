@@ -43,13 +43,13 @@ void loop()
 	
 	while (digitalRead(2) == LOW)
 	{
-		Keyboard.press(EWOKeyArray[EWOKeyCount]);
-		Keyboard.release(EWOKeyArray[EWOKeyCount]);
-		delay(200);
-		EWOTimer++;
-		
 		if (EWOTimer < EWOTimerMax)
 		{
+			Keyboard.press(EWOKeyArray[EWOKeyCount]);
+			Keyboard.release(EWOKeyArray[EWOKeyCount]);
+			delay(200);
+			EWOTimer++;
+			
 			EWOKeyCount++;
 			if (EWOKeyCount > EWOKeyArray[0])
 			{
